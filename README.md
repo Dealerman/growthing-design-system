@@ -59,7 +59,7 @@ How Growthing writes — observed directly from the proposal deck.
 - **Two-digit step numbers.** *01, 02, … 09* in magenta, always with a zero-prefix. Used in flowcharts, pricing, and step lists.
 - **Hours explicitly quantified.** *"25hs durante las primeras 3 semanas"*, *"168 hs de Front-End"*, *"508 hs de Back-End"*. Numbers carry authority.
 - **Dates: `DD-MM-YY`.** *"FECHA: 16-10-25"*, *"VALIDEZ: HASTA EL 23-10-25"*.
-- **Currency in US dollars with IVA line.** *"10 pagos de 2.000 + IVA"* — pesos are paid at *Dólar Blue* rate.
+- **Currency in US dollars with IVA line.** *"10 pagos de xxxxx + IVA"* — pesos are paid at *Dólar Blue* rate.
 
 ### Emoji and emphasis
 - **No emoji.** The deck contains zero emoji. Do not add them. Emphasis is carried by weight (heavy/ultra Poppins) and colour (magenta), not iconographic flair.

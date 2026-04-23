@@ -1,0 +1,31 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Gradients</title>
+<link rel="stylesheet" href="_card.css"></head>
+<body>
+<div class="card">
+  <div class="col" style="gap:14px;">
+    <div>
+      <div style="height:52px;background:linear-gradient(90deg,#FFE6F2 0%,#FF0084 100%);"></div>
+      <div class="label" style="margin-top:6px;">Gradient Bar (L→R)</div>
+      <div class="hex">#FFE6F2 → #FF0084</div>
+    </div>
+    <div>
+      <div style="height:52px;background:linear-gradient(90deg,#FFE6F2 0%,#FF0084 50%,#FFE6F2 100%);"></div>
+      <div class="label" style="margin-top:6px;">Gradient Divider</div>
+      <div class="hex">pink — magenta — pink</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div>
+        <div style="height:64px;background:linear-gradient(135deg,#FF0084 0%,#FFB3D6 100%);"></div>
+        <div class="label" style="margin-top:6px;">Wedge</div>
+        <div class="hex">135° · magenta → pink-200</div>
+      </div>
+      <div>
+        <div style="height:64px;background:linear-gradient(135deg,#FFB3D6 0%,#FFFFFF 100%);box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);"></div>
+        <div class="label" style="margin-top:6px;">Fade</div>
+        <div class="hex">pink-200 → white</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

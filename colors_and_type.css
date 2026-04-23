@@ -1,0 +1,295 @@
+/* ==========================================================================
+   Growthing Design System — Foundations
+   Typography: Poppins (all weights)
+   Palette:    Magenta on Black, accent Orange
+   ========================================================================== */
+
+/* ---------- Fonts ---------- */
+/* Poppins — the brand family. Local TTFs shipped in /fonts.
+   Full weight range 100–900, roman + italic. */
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:100; font-display:swap; src:url('fonts/Poppins-Thin.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:italic; font-weight:100; font-display:swap; src:url('fonts/Poppins-ThinItalic.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:200; font-display:swap; src:url('fonts/Poppins-ExtraLight.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:italic; font-weight:200; font-display:swap; src:url('fonts/Poppins-ExtraLightItalic.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:300; font-display:swap; src:url('fonts/Poppins-Light.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:italic; font-weight:300; font-display:swap; src:url('fonts/Poppins-LightItalic.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:400; font-display:swap; src:url('fonts/Poppins-Regular.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:italic; font-weight:400; font-display:swap; src:url('fonts/Poppins-Italic.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:500; font-display:swap; src:url('fonts/Poppins-Medium.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:italic; font-weight:500; font-display:swap; src:url('fonts/Poppins-MediumItalic.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:600; font-display:swap; src:url('fonts/Poppins-SemiBold.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:italic; font-weight:600; font-display:swap; src:url('fonts/Poppins-SemiBoldItalic.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:700; font-display:swap; src:url('fonts/Poppins-Bold.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:italic; font-weight:700; font-display:swap; src:url('fonts/Poppins-BoldItalic.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:800; font-display:swap; src:url('fonts/Poppins-ExtraBold.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:italic; font-weight:800; font-display:swap; src:url('fonts/Poppins-ExtraBoldItalic.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:normal; font-weight:900; font-display:swap; src:url('fonts/Poppins-Black.ttf') format('truetype'); }
+@font-face { font-family:'Poppins'; font-style:italic; font-weight:900; font-display:swap; src:url('fonts/Poppins-BlackItalic.ttf') format('truetype'); }
+
+:root {
+  /* ------------------------------------------------------------------
+     COLOR — base tokens
+     ------------------------------------------------------------------ */
+
+  /* Brand */
+  --gw-magenta:        #FF0084;   /* primary — from logo & slide 1 */
+  --gw-magenta-600:    #E50077;
+  --gw-magenta-400:    #FF4DA8;
+  --gw-magenta-200:    #FFB3D6;
+  --gw-magenta-50:     #FFE6F2;
+  --gw-orange:         #F1945B;   /* accent — slides 3/9 */
+  --gw-orange-200:     #F8C7A6;
+
+  /* Neutrals */
+  --gw-black:          #000000;   /* the deck is unapologetically black-or-white */
+  --gw-ink:            #0B0B0B;
+  --gw-graphite:       #1A1A1A;
+  --gw-slate:          #3D3D3D;
+  --gw-steel:          #6B6B6B;
+  --gw-ash:            #A8A8A8;
+  --gw-mist:           #D9D9D9;
+  --gw-fog:            #EDEDED;
+  --gw-paper:          #F7F7F7;
+  --gw-white:          #FFFFFF;
+
+  /* Semantic (derived) */
+  --gw-success:        #18B26B;
+  --gw-warning:        #F1945B;
+  --gw-error:          #E5344E;
+  --gw-info:           #2E7DE9;
+
+  /* ------------------------------------------------------------------
+     COLOR — semantic/theme (light surface, the default in UI)
+     ------------------------------------------------------------------ */
+  --fg-1:              var(--gw-black);      /* headings, primary text */
+  --fg-2:              var(--gw-graphite);   /* body */
+  --fg-3:              var(--gw-steel);      /* secondary/meta */
+  --fg-4:              var(--gw-ash);        /* muted/placeholder */
+  --fg-on-brand:       var(--gw-white);
+
+  --bg-1:              var(--gw-white);      /* page */
+  --bg-2:              var(--gw-paper);      /* card / subtle surface */
+  --bg-3:              var(--gw-fog);        /* inset / field */
+  --bg-inverse:        var(--gw-black);
+
+  --brand:             var(--gw-magenta);
+  --brand-hover:       var(--gw-magenta-600);
+  --brand-soft:        var(--gw-magenta-50);
+
+  --border-1:          var(--gw-mist);
+  --border-2:          var(--gw-fog);
+  --border-strong:     var(--gw-black);
+
+  --link:              var(--gw-magenta);
+  --link-hover:        var(--gw-magenta-600);
+
+  /* ------------------------------------------------------------------
+     COLOR — gradients (used ornamentally: bars, triangles, chevrons)
+     ------------------------------------------------------------------ */
+  --gw-gradient-bar:      linear-gradient(90deg, #FFE6F2 0%, #FF0084 100%);
+  --gw-gradient-bar-rev:  linear-gradient(270deg, #FFE6F2 0%, #FF0084 100%);
+  --gw-gradient-wedge:    linear-gradient(135deg, #FF0084 0%, #FFB3D6 100%);
+
+  /* ------------------------------------------------------------------
+     TYPE — families
+     ------------------------------------------------------------------ */
+  --font-sans:         'Poppins', ui-sans-serif, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --font-display:      'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --font-mono:         ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Weights */
+  --fw-light:     300;
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+  --fw-heavy:     800;
+  --fw-ultra:     900;
+
+  /* Scale — 1rem = 16px */
+  --fs-xs:     12px;
+  --fs-sm:     14px;
+  --fs-base:   16px;
+  --fs-md:     18px;
+  --fs-lg:     20px;
+  --fs-xl:     24px;
+  --fs-2xl:    32px;
+  --fs-3xl:    40px;
+  --fs-4xl:    56px;
+  --fs-5xl:    72px;
+  --fs-hero:   96px;
+
+  /* Line heights */
+  --lh-tight:   1.05;
+  --lh-snug:    1.2;
+  --lh-normal:  1.45;
+  --lh-loose:   1.7;
+
+  /* Letter spacing — Growthing leans on ALL-CAPS LABELS with
+     slight tracking for eyebrows, and TIGHT tracking on display. */
+  --ls-tight:    -0.02em;
+  --ls-normal:    0;
+  --ls-wide:     0.06em;
+  --ls-wider:    0.12em;
+  --ls-label:    0.16em;
+
+  /* ------------------------------------------------------------------
+     SPACING — 4px base
+     ------------------------------------------------------------------ */
+  --sp-0:    0;
+  --sp-1:    4px;
+  --sp-2:    8px;
+  --sp-3:    12px;
+  --sp-4:    16px;
+  --sp-5:    20px;
+  --sp-6:    24px;
+  --sp-8:    32px;
+  --sp-10:   40px;
+  --sp-12:   48px;
+  --sp-16:   64px;
+  --sp-20:   80px;
+  --sp-24:   96px;
+  --sp-32:   128px;
+
+  /* ------------------------------------------------------------------
+     RADIUS — the deck uses a lot of PILL shapes (bullet pills, the
+     pink "o" detail on slide 15), plus hard squares. No 8–16px
+     "soft" radii — it's either hard edges or full pill.
+     ------------------------------------------------------------------ */
+  --r-none:    0;
+  --r-sm:      4px;
+  --r-md:      8px;
+  --r-lg:      12px;
+  --r-pill:    999px;
+
+  /* ------------------------------------------------------------------
+     SHADOWS — used sparingly. Most cards are flat/bordered.
+     ------------------------------------------------------------------ */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-sm: 0 2px 6px rgba(0,0,0,.08);
+  --shadow-md: 0 8px 24px rgba(0,0,0,.10);
+  --shadow-lg: 0 24px 48px rgba(0,0,0,.14);
+  --shadow-brand: 0 8px 24px rgba(255,0,132,.28);
+
+  /* ------------------------------------------------------------------
+     MOTION
+     ------------------------------------------------------------------ */
+  --ease-out:    cubic-bezier(.22, 1, .36, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --dur-fast:    120ms;
+  --dur-base:    200ms;
+  --dur-slow:    420ms;
+
+  /* ------------------------------------------------------------------
+     LAYOUT
+     ------------------------------------------------------------------ */
+  --container-sm: 640px;
+  --container-md: 960px;
+  --container-lg: 1200px;
+  --container-xl: 1440px;
+}
+
+/* ==========================================================================
+   SEMANTIC TYPE CLASSES
+   Apply directly on elements OR use the variables below.
+   ========================================================================== */
+
+.gw-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+.gw-h1, h1.gw {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 6vw, var(--fs-hero));
+  font-weight: var(--fw-ultra);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg-1);
+  text-transform: uppercase;
+}
+
+.gw-h2, h2.gw {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.5vw, var(--fs-4xl));
+  font-weight: var(--fw-heavy);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg-1);
+  text-transform: uppercase;
+}
+
+.gw-h3, h3.gw {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+
+.gw-h4, h4.gw {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+
+.gw-lead {
+  font-family: var(--font-sans);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  color: var(--fg-2);
+}
+
+.gw-p, p.gw {
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-loose);
+  color: var(--fg-2);
+  text-wrap: pretty;
+}
+
+.gw-small {
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  color: var(--fg-3);
+  line-height: var(--lh-normal);
+}
+
+.gw-caps {
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+  font-weight: var(--fw-semibold);
+}
+
+.gw-mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+}
+
+/* A specific recurring deck pattern: a number badge (01, 02…) in
+   magenta with heavy weight beside a step title. */
+.gw-step-number {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-heavy);
+  color: var(--brand);
+  letter-spacing: var(--ls-tight);
+  line-height: 1;
+}
+
+/* Body reset helpers — opt in with .gw-type-root on a wrapping element
+   rather than polluting html/body globally. */
+.gw-type-root {
+  font-family: var(--font-sans);
+  color: var(--fg-1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

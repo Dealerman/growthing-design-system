@@ -1,0 +1,187 @@
+/* Growthing slides — inherits colors_and_type.css */
+@import url('../colors_and_type.css');
+
+.slide {
+  width: 1920px;
+  height: 1080px;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Decorative corner motifs */
+.corner-chevron-br {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 720px;
+  height: 900px;
+  background-image: url('../assets/graphic-chevron-pink.png');
+  background-size: contain;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+.corner-triangle-tr {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 540px;
+  height: 820px;
+  background-image: url('../assets/graphic-triangle-pink.png');
+  background-size: contain;
+  background-position: right top;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+.corner-diagonal {
+  position: absolute;
+  right: 120px;
+  top: 0;
+  width: 520px;
+  height: 100%;
+  background-image: url('../assets/graphic-diagonal-line.png');
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+.gradient-divider {
+  width: 420px;
+  height: 6px;
+  background: linear-gradient(90deg, #FFE6F2 0%, #FF0084 100%);
+}
+
+/* Base heading styles */
+.eyebrow {
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #FF0084;
+}
+.eyebrow.ink { color: #000; }
+
+.title-hero {
+  font-weight: 900;
+  font-size: 150px;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: #000;
+}
+.title-hero .pink { color: #FF0084; }
+
+.title-section {
+  font-weight: 900;
+  font-size: 110px;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.title-slide {
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.copy {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.55;
+  color: #1A1A1A;
+}
+
+.copy b, .copy strong { font-weight: 700; color: #000; }
+
+.logo-corner {
+  position: absolute;
+  left: 80px;
+  bottom: 60px;
+  height: 52px;
+  z-index: 2;
+}
+.logo-corner img { height: 100%; display: block; }
+
+.slide-number {
+  position: absolute;
+  right: 80px;
+  bottom: 60px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.24em;
+  color: #A8A8A8;
+  z-index: 2;
+}
+
+/* step number badge */
+.step-badge {
+  font-weight: 900;
+  font-size: 96px;
+  color: #FF0084;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+/* Service tile (round magenta) */
+.service-tile {
+  text-align: center;
+}
+.service-tile .bubble {
+  width: 180px;
+  height: 180px;
+  background: #FF0084;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+.service-tile .bubble svg {
+  width: 84px; height: 84px;
+  stroke: #fff; fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.service-tile .name {
+  font-weight: 700;
+  font-size: 20px;
+  color: #FF0084;
+  line-height: 1.2;
+}
+
+/* Contact capsule pill */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 22px;
+  color: #000;
+}
+.pill svg { width: 24px; height: 24px; stroke: #000; fill: none; stroke-width: 1.8; }
+
+/* Dark section slide */
+.slide.dark {
+  background: #000;
+  color: #fff;
+}
+.slide.dark .title-section,
+.slide.dark .title-hero,
+.slide.dark .title-slide { color: #fff; }
+.slide.dark .copy { color: #D9D9D9; }
+.slide.dark .slide-number { color: #3D3D3D; }
